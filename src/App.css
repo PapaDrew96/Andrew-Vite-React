@@ -1,0 +1,69 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 0;
+  font-family: 'Kode Mono', monospace;
+}
+
+
+.buttons-container {
+  display: flex;
+  position: absolute;
+  top: 1em; 
+  right: 2vw; 
+}
+
+/* Tablets (devices with widths up to 768px) */
+@media (max-width: 768px) {
+  .homepage-header {
+    font-size: 2.5rem; /* Adjust font size for tablets */
+    transform: translate(5%, -50%); /* Adjust positioning */
+  }
+
+  .pop-up-container, .menu-toggle, .menu-content {
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .menu-content ul li a {
+    padding: 0.4rem 0; /* Adjust padding */
+  }
+
+  .login-form, .signup-form {
+    padding: 1em; /* Reduce padding */
+    gap: 0.8em; /* Adjust gap */
+  }
+
+  .form-group input, .submit-btn, .logInButton, .signUpButton {
+    padding: 8px 15px; /* Adjust padding */
+    font-size: 14px; /* Adjust font size */
+  }
+}
+
+/* Phones (devices with widths up to 480px) */
+@media (max-width: 480px) {
+  .homepage-header {
+    font-size: 2rem; /* Further reduce font size for phones */
+    transform: translate(0%, -50%); /* Center it more as we have less space on the sides */
+  }
+
+  .buttons-container {
+    top: 0.5em;
+    right: 1em; /* Adjust position */
+  }
+
+  .login-form, .signup-form {
+    padding: 0.8em; /* Further reduce padding */
+    gap: 0.5em; /* Adjust gap */
+  }
+
+  .form-group input, .submit-btn, .logInButton, .signUpButton {
+    padding: 7px 12px; /* Further adjust padding */
+    font-size: 12px; /* Reduce font size */
+  }
+}
+
+

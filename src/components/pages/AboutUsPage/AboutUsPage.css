@@ -1,0 +1,60 @@
+.about-us-page {
+  font-family: 'Kode Mono', monospace;
+    color: #2c3e50; 
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(245, 245, 245, 0.8);
+    overflow: auto;
+  }
+  
+  .about-us-page header h1 {
+    color: #2980b9; 
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-page section {
+    margin-bottom: 20px;
+    background-color: #ffffff; 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  }
+  
+  .about-us-page section h2 {
+    color: #3498db; 
+    margin-bottom: 10px;
+  }
+  
+  .about-us-page section p,
+  .about-us-page section ul {
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  .about-us-page section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .about-us-page section ul li strong {
+    color: #2c3e50; 
+  }
+
+  @media (max-width: 600px) {
+    .about-us-page {
+      padding: 10px;
+      max-width: 100%;
+    }
+  
+    .about-us-page section {
+      padding: 10px;
+    }
+  
+    .about-us-page section h2 {
+      font-size: 18px; 
+    }
+  }
+  
+  

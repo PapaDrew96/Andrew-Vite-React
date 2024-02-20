@@ -1,0 +1,48 @@
+
+body {
+  font-family: 'Kode Mono', monospace;
+}
+/* Custom text colors for better contrast */
+.text-custom-primary {
+  color: #32648e; /* Darker shade of blue for primary text */
+  font-weight: 200;
+}
+.font-weight-bold {
+  color: white;
+}
+#Pdesc{
+  color: white;
+  font-weight: 500;
+}
+
+.text-custom-secondary {
+  color: #2c3e50; /* Darker grey for secondary text, ensures better contrast against light backgrounds */
+  font-weight: 700; /* Keeping the font weight bold for emphasis */
+}
+
+.text-custom-info {
+  color: #057fa5; /* Slightly darker blue for info text to enhance contrast */
+  font-weight: 200;
+}
+
+.text-custom-success {
+  color: #5a68a5; /* Adjusted to a darker shade for better visibility against light backgrounds */
+  font-weight: 200;
+}
+
+.text-custom-warning {
+  color: #d58512; /* A darker shade of yellow/orange for warning, enhancing contrast */
+  font-weight: 200;
+}
+
+/* Adjusting background colors for sections for better contrast */
+/* Updated CSS to apply a semi-transparent background only to sections */
+
+.section-custom {
+  background-color: rgba(255, 255, 255, 0.8); /* Applying semi-transparent white background */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
