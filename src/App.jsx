@@ -5,7 +5,7 @@ import PopUpMenu from './components/PopUpMenu/PopUpMenu.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-// Existing lazy-loaded components
+
 const HomePageHeader = lazy(() => import('./components/HomePageHeader/HomePageHeader.jsx'));
 const LogInButton = lazy(() => import('./components/LogInButton/LogInButton.jsx'));
 const SignUpButton = lazy(() => import('./components/SignUpButton/SignUpButton.jsx'));
