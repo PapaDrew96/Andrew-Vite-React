@@ -1,29 +1,36 @@
+// Third-party imports
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {AuthProvider} from './context/AuthContext.jsx';
-import PopUpMenu from './components/PopUpMenu/PopUpMenu.jsx';
+
+// Style imports
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+// Contexts
+import { AuthProvider } from './context/AuthContext';
 
-const HomePageHeader = lazy(() => import('./components/HomePageHeader/HomePageHeader.jsx'));
-const LogInButton = lazy(() => import('./components/LogInButton/LogInButton.jsx'));
-const SignUpButton = lazy(() => import('./components/SignUpButton/SignUpButton.jsx'));
-const LoginForm = lazy(() => import('./components/LoginForm/LoginForm.jsx'));
-const SignUpForm = lazy(() => import('./components/SignUpForm/SignUpForm.jsx'));
-const AboutUsPage = lazy(() => import('./components/pages/AboutUsPage/AboutUsPage.jsx'));
-const AboutTimeCapsulePage = lazy(() => import('./components/pages/AboutTimeCapsulePage/AboutTimeCapsulePage.jsx'));
-const PapadrewToolsPage = lazy(() => import('./components/pages/PapadrewToolsPage/PapadrewToolsPage.jsx'));
-const ComingSoonPage = lazy(() => import('./components/pages/ComingSoonPage/ComingSoonPage.jsx'));
-const FileUploadPage = lazy(() => import('./components/pages/FileUploadPage/FileUploadPage.jsx')); // Lazy-load FileUploadPage
+// Components
+import PopUpMenu from './components/PopUpMenu/PopUpMenu';
+
+// Lazy-loaded components
+const HomePageHeader = lazy(() => import('./components/HomePageHeader/HomePageHeader'));
+const LogInButton = lazy(() => import('./components/LogInButton/LogInButton'));
+const SignUpButton = lazy(() => import('./components/SignUpButton/SignUpButton'));
+const LoginForm = lazy(() => import('./components/LoginForm/LoginForm'));
+const SignUpForm = lazy(() => import('./components/SignUpForm/SignUpForm'));
+const AboutUsPage = lazy(() => import('./components/pages/AboutUsPage/AboutUsPage'));
+const AboutTimeCapsulePage = lazy(() => import('./components/pages/AboutTimeCapsulePage/AboutTimeCapsulePage'));
+const PapadrewToolsPage = lazy(() => import('./components/pages/PapadrewToolsPage/PapadrewToolsPage'));
+const ComingSoonPage = lazy(() => import('./components/pages/ComingSoonPage/ComingSoonPage'));
+const FileUploadPage = lazy(() => import('./components/pages/FileUploadPage/FileUploadPage'));
 
 function App() {
   return (
-    <AuthProvider> 
+    <AuthProvider>
       <Router>
         <PopUpMenu />
         <div className="App">
-          <Suspense fallback={<div>Loading...</div>}> {/* Fallback component shown during load */}
+          <Suspense fallback={<div>Loading...</div>}>
             <Routes>
               <Route path="/" element={
                 <>
@@ -34,13 +41,18 @@ function App() {
                   </div>
                 </>
               } />
+              {/* Auth routes */}
               <Route path="/login" element={<LoginForm />} />
               <Route path="/signup" element={<SignUpForm />} />
+              
+              {/* Static pages */}
               <Route path="/about-us" element={<AboutUsPage />} />
               <Route path="/about-time-capsule" element={<AboutTimeCapsulePage />} />
               <Route path="/papadrew-tools" element={<PapadrewToolsPage />} />
               <Route path="/coming-soon" element={<ComingSoonPage />} />
-              <Route path="/upload" element={<FileUploadPage />} /> 
+              
+              {/* Feature pages */}
+              <Route path="/upload" element={<FileUploadPage />} />
             </Routes>
           </Suspense>
         </div>
