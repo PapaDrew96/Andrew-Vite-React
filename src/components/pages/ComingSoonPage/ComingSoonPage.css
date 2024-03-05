@@ -2,6 +2,9 @@
 body {
   font-family: 'Kode Mono', monospace;
 }
+.coming-soon-page {
+  overflow: auto;
+}
 /* Custom text colors for better contrast */
 .text-custom-primary {
   color: #32648e; /* Darker shade of blue for primary text */
